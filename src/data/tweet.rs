@@ -45,6 +45,8 @@ pub struct Attachments {
     pub media_keys: Option<Vec<StringId>>,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub poll_ids: Option<Vec<NumericId>>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub card_ids: Option<Vec<String>>,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize, Eq, PartialEq)]

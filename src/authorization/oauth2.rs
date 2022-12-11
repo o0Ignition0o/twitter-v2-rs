@@ -66,6 +66,9 @@ pub enum Scope {
     #[strum(serialize = "dm.read")]
     #[serde(rename = "dm.read")]
     DmRead,
+    #[strum(serialize = "dm.write")]
+    #[serde(rename = "dm.write")]
+    DmWrite,
     #[strum(serialize = "block.read")]
     #[serde(rename = "block.read")]
     BlockRead,
