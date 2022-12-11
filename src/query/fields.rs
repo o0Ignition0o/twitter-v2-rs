@@ -15,7 +15,7 @@ pub enum MediaField {
     OrganicMetrics,
     PromotedMetrics,
     AltText,
-    Variants
+    Variants,
 }
 
 #[derive(Copy, Clone, Debug, Display)]
@@ -64,6 +64,20 @@ pub enum TweetField {
     Source,
     Text,
     Withheld,
+}
+
+#[derive(Copy, Clone, Debug, Display)]
+#[strum(serialize_all = "snake_case")]
+pub enum DmEventField {
+    Attachments,
+    CreatedAt,
+    DmConversationId,
+    EventType,
+    Id,
+    ParticipantIds,
+    ReferencedTweets,
+    SenderId,
+    Text,
 }
 
 #[derive(Copy, Clone, Debug, Display)]

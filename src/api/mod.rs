@@ -1,5 +1,6 @@
 mod base;
 mod compliance;
+mod direct_message;
 mod lists;
 mod spaces;
 mod tweets;

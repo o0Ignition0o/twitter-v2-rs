@@ -9,6 +9,16 @@ macro_rules! get_req_builder_arg {
             self
         }
     };
+    (dm_event_fields) => {
+        pub fn dm_event_fields(
+            &mut self,
+            fields: impl IntoIterator<Item = $crate::query::DmEventField>,
+        ) -> &mut Self {
+            use $crate::query::UrlQueryExt;
+            self.url.append_query_seq("dm_event.fields", fields);
+            self
+        }
+    };
     (media_fields) => {
         pub fn media_fields(
             &mut self,

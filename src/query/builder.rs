@@ -1,6 +1,15 @@
 use super::get_req_builder;
 
 get_req_builder! {
+pub struct GetConversationRequestBuilder {
+    dm_event_fields,
+    media_fields,
+    user_fields,
+    tweet_fields
+}
+}
+
+get_req_builder! {
 pub struct GetTweetsRequestBuilder {
     media_fields,
     user_fields,
